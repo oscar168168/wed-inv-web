@@ -86,7 +86,7 @@ export default function WeddingInvitation(): React.ReactElement {
         </div>
 
         <div className="relative z-10 text-center">
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <div className="m-4">
               <Image
                 src="/hero-cover.jpg"
@@ -94,6 +94,17 @@ export default function WeddingInvitation(): React.ReactElement {
                 width={1000}
                 height={1000}
                 className="mx-auto aspect-2/3 max-w-sm border-8 border-blue-400 rounded-full object-cover mt-4"
+              />
+            </div>
+          </div> */}
+          <div className="mb-6">
+            <div className="m-4">
+              <Image
+                src="/main-card.png"
+                alt="Logo"
+                width={1000}
+                height={1000}
+                className="mx-auto max-w-md "
               />
             </div>
           </div>
