@@ -84,17 +84,6 @@ export default function WeddingInvitation(): React.ReactElement {
         </div>
 
         <div className="relative z-10 text-center">
-          {/* <div className="mb-6">
-            <div className="m-4">
-              <Image
-                src="/hero-cover.jpg"
-                alt="Logo"
-                width={1000}
-                height={1000}
-                className="mx-auto aspect-2/3 max-w-sm border-8 border-blue-400 rounded-full object-cover mt-4"
-              />
-            </div>
-          </div> */}
           <div className="mb-6">
             <div className="m-4">
               <Image
@@ -102,7 +91,7 @@ export default function WeddingInvitation(): React.ReactElement {
                 alt="Logo"
                 width={1000}
                 height={1000}
-                className="mx-auto max-w-md "
+                className="mx-auto md:max-w-md max-w-xs"
               />
             </div>
           </div>
@@ -111,16 +100,13 @@ export default function WeddingInvitation(): React.ReactElement {
             We're getting married
           </p>
 
-          {/* <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-2">
-            Raksmey & Dilen
-          </h1> */}
           <div className="">
             <Image
               src="/name.png"
               alt="Logo"
               width={1000}
               height={1000}
-              className="mx-auto max-w-sm object-cover mt-4"
+              className="mx-auto md:max-w-sm max-w-[300px] object-cover mt-4"
             />
           </div>
 
