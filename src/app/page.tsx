@@ -1,15 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {
-  Heart,
-  MapPin,
-  Calendar,
-  Clock,
-  Users,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { MapPin, Calendar, Clock, Users, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+import {
+  ChatSettingsIcon,
+  ClipboardListIcon,
+  HeartIcon,
+  MailIcon,
+} from "../../public/icon/icon";
 
 interface TimeLeft {
   days: number;
@@ -58,10 +56,10 @@ export default function WeddingInvitation(): React.ReactElement {
   };
 
   const navItems: NavItem[] = [
-    { id: "home", icon: Heart, label: "Home" },
-    { id: "story", icon: Users, label: "Story" },
-    { id: "details", icon: Calendar, label: "Details" },
-    { id: "rsvp", icon: Mail, label: "RSVP" },
+    { id: "home", icon: HeartIcon, label: "Home" },
+    { id: "story", icon: ChatSettingsIcon, label: "Story" },
+    { id: "details", icon: ClipboardListIcon, label: "Details" },
+    { id: "rsvp", icon: MailIcon, label: "RSVP" },
   ];
 
   return (
@@ -168,7 +166,7 @@ export default function WeddingInvitation(): React.ReactElement {
           <div className="w-16 h-1 bg-blue-400 mx-auto mb-8"></div>
 
           <div className="space-y-6">
-            <div className="relative pl-8 border-l-2 border-blue-300 pb-8">
+            <div className="relative pl-8 border-l-2 border-blue-100 pb-8">
               <div className="absolute left-0 top-0 w-4 h-4 bg-blue-400 rounded-full -translate-x-[9px]"></div>
               <p className="text-sm text-gray-500 mb-1">Spring 2019</p>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -181,7 +179,7 @@ export default function WeddingInvitation(): React.ReactElement {
               </p>
             </div>
 
-            <div className="relative pl-8 border-l-2 border-blue-300 pb-8">
+            <div className="relative pl-8 border-l-2 border-blue-100 pb-8">
               <div className="absolute left-0 top-0 w-4 h-4 bg-blue-400 rounded-full -translate-x-[9px]"></div>
               <p className="text-sm text-gray-500 mb-1">Summer 2020</p>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -193,7 +191,7 @@ export default function WeddingInvitation(): React.ReactElement {
               </p>
             </div>
 
-            <div className="relative pl-8 border-l-2 border-blue-300 pb-0">
+            <div className="relative pl-8 border-l-2 border-blue-100 pb-0">
               <div className="absolute left-0 top-0 w-4 h-4 bg-blue-400 rounded-full -translate-x-[9px]"></div>
               <p className="text-sm text-gray-500 mb-1">Winter 2024</p>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -224,7 +222,7 @@ export default function WeddingInvitation(): React.ReactElement {
             <div className="bg-white rounded-2xl p-6">
               <div className="flex items-start gap-4">
                 <div className="bg-blue-100 p-3 rounded-full">
-                  <Heart className="w-6 h-6 text-blue-500" />
+                  <HeartIcon className="w-6 h-6 text-blue-500" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -313,7 +311,7 @@ export default function WeddingInvitation(): React.ReactElement {
 
           {!showRSVP ? (
             <div className="bg-linear-to-br from-blue-50 to-sky-50 rounded-2xl p-8 text-center">
-              <Heart className="w-16 h-16 mx-auto mb-4 text-blue-400" />
+              <HeartIcon className="w-16 h-16 mx-auto mb-4 text-blue-400" />
               <p className="text-gray-600 mb-6">
                 Your presence would mean the world to us. Please let us know if
                 you can join our celebration!
@@ -440,7 +438,7 @@ export default function WeddingInvitation(): React.ReactElement {
 
       {/* Footer */}
       <footer className="px-6 pt-12 pb-28 bg-blue-100 text-center">
-        <Heart className="w-8 h-8 mx-auto mb-4 text-blue-400 fill-blue-400" />
+        <HeartIcon className="w-8 h-8 mx-auto mb-4 text-blue-400 fill-blue-400" />
         <p className="text-gray-600 mb-2">
           We can't wait to celebrate with you!
         </p>
@@ -455,11 +453,13 @@ export default function WeddingInvitation(): React.ReactElement {
               key={id}
               onClick={() => scrollToSection(id)}
               className={`flex flex-col items-center gap-1 transition-colors ${
-                activeSection === id ? "text-blue-500" : "text-gray-500"
+                activeSection === id ? "text-blue-500" : "text-slate-400"
               }`}
             >
               <Icon className="w-5 h-5" />
-              <span className="text-xs font-sans">{label}</span>
+              <span className={`text-[10px] font-semibold font-sans `}>
+                {label}
+              </span>
             </button>
           ))}
         </div>
