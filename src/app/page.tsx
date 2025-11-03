@@ -439,7 +439,7 @@ export default function WeddingInvitation(): React.ReactElement {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 bg-blue-100 text-center">
+      <footer className="px-6 pt-12 pb-28 bg-blue-100 text-center">
         <Heart className="w-8 h-8 mx-auto mb-4 text-blue-400 fill-blue-400" />
         <p className="text-gray-600 mb-2">
           We can't wait to celebrate with you!
