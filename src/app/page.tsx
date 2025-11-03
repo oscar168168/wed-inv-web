@@ -111,7 +111,7 @@ export default function WeddingInvitation(): React.ReactElement {
               alt="Logo"
               width={1000}
               height={1000}
-              className="mx-auto max-w-lg object-cover mt-4"
+              className="mx-auto max-w-sm object-cover mt-4"
             />
           </div>
 
